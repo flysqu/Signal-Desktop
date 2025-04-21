@@ -15,6 +15,9 @@ import {
 } from '../util/leftPaneWidth';
 import { WidthBreakpoint, getNavSidebarWidthBreakpoint } from './_util';
 import type { UnreadStats } from '../util/countUnreadStats';
+import { NavTab } from '../state/ducks/nav';
+import { getSelectedNavTab } from '../state/selectors/nav';
+import { useSelector } from 'react-redux';
 
 type NavSidebarActionButtonProps = {
   icon: ReactNode;
@@ -162,6 +165,7 @@ export function NavSidebar({
       role="navigation"
       className={classNames('NavSidebar', {
         'NavSidebar--narrow': widthBreakpoint === WidthBreakpoint.Narrow,
+        'NavSidebar--collapsed': useSelector(getSelectedNavTab) == NavTab.Chats && navTabsCollapsed
       })}
       style={{ width }}
     >
