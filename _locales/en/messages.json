@@ -2149,6 +2149,10 @@
     "messageformat": "Spell check text entered in message composition box",
     "description": "Description of the spell check setting"
   },
+  "icu:mobileUiTweaksDescription": {
+    "messageformat": "Make the UI better suited for phone-sized displays",
+    "description": "Description of the mobile ui tweaks setting"
+  },
   "icu:textFormattingDescription": {
     "messageformat": "Show text formatting popover when text is selected",
     "description": "Description of the text-formatting popover menu setting"

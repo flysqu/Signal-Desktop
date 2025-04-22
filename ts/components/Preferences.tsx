@@ -116,6 +116,7 @@ export type PropsDataType = {
   hasStoriesDisabled: boolean;
   hasTextFormatting: boolean;
   hasTypingIndicators: boolean;
+  hasMobileUiTweaks: boolean;
   initialPage?: Page;
   lastSyncTime?: number;
   notificationContent: NotificationSettingType;
@@ -211,6 +212,7 @@ type PropsFunctionType = {
   onSelectedSpeakerChange: SelectChangeHandlerType<AudioDevice | undefined>;
   onSentMediaQualityChange: SelectChangeHandlerType<SentMediaQualityType>;
   onSpellCheckChange: CheckboxChangeHandlerType;
+  onMobileUiTweaksCheckChange: CheckboxChangeHandlerType;
   onTextFormattingChange: CheckboxChangeHandlerType;
   onThemeChange: SelectChangeHandlerType<ThemeType>;
   onUniversalExpireTimerChange: SelectChangeHandlerType<number>;
@@ -311,6 +313,7 @@ export function Preferences({
   hasReadReceipts,
   hasRelayCalls,
   hasSpellCheck,
+  hasMobileUiTweaks,
   hasStoriesDisabled,
   hasTextFormatting,
   hasTypingIndicators,
@@ -356,6 +359,7 @@ export function Preferences({
   onSelectedSpeakerChange,
   onSentMediaQualityChange,
   onSpellCheckChange,
+  onMobileUiTweaksCheckChange,
   onTextFormattingChange,
   onThemeChange,
   onUniversalExpireTimerChange,
@@ -881,6 +885,14 @@ export function Preferences({
                 value={zoomFactor}
               />
             }
+          />
+
+          <Checkbox
+            checked={hasMobileUiTweaks}
+            label={i18n('icu:mobileUiTweaksDescription')}
+            moduleClassName="Preferences__checkbox"
+            name="MobileUiTweaks"
+            onChange={onMobileUiTweaksCheckChange}
           />
         </SettingsRow>
       </>

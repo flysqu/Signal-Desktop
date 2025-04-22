@@ -230,6 +230,10 @@ export const getTextFormattingEnabled = createSelector(
   getItems,
   (state: ItemsStateType): boolean => Boolean(state.textFormatting ?? true)
 );
+export const getMobileUiTweaksEnabled = createSelector(
+  getItems,
+  (state: ItemsStateType): boolean => Boolean(state.mobileUiTweaks ?? true)
+);
 
 export const getNavTabsCollapsed = createSelector(
   getItems,

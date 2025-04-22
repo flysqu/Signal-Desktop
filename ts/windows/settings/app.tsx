@@ -66,6 +66,7 @@ SettingsWindowProps.onRender(
     hasSpellCheck,
     hasStoriesDisabled,
     hasTextFormatting,
+    hasMobileUiTweaks,
     hasTypingIndicators,
     initialSpellCheckSetting,
     isAutoDownloadUpdatesSupported,
@@ -108,6 +109,7 @@ SettingsWindowProps.onRender(
     onSentMediaQualityChange,
     onSpellCheckChange,
     onTextFormattingChange,
+    onMobileUiTweaksCheckChange,
     onThemeChange,
     onUniversalExpireTimerChange,
     onWhoCanFindMeChange,
@@ -178,6 +180,7 @@ SettingsWindowProps.onRender(
         hasSpellCheck={hasSpellCheck}
         hasStoriesDisabled={hasStoriesDisabled}
         hasTextFormatting={hasTextFormatting}
+        hasMobileUiTweaks={hasMobileUiTweaks}
         hasTypingIndicators={hasTypingIndicators}
         i18n={i18n}
         initialSpellCheckSetting={initialSpellCheckSetting}
@@ -226,6 +229,7 @@ SettingsWindowProps.onRender(
         onSentMediaQualityChange={onSentMediaQualityChange}
         onSpellCheckChange={onSpellCheckChange}
         onTextFormattingChange={onTextFormattingChange}
+        onMobileUiTweaksCheckChange={onMobileUiTweaksCheckChange}
         onThemeChange={onThemeChange}
         onUniversalExpireTimerChange={onUniversalExpireTimerChange}
         onWhoCanFindMeChange={onWhoCanFindMeChange}

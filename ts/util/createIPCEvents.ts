@@ -96,6 +96,7 @@ export type IPCEventsValuesType = {
   preferredVideoInputDevice: string | undefined;
   sentMediaQualitySetting: SentMediaQualityType;
   textFormatting: boolean;
+  mobileUiTweaks: boolean;
   universalExpireTimer: DurationInSeconds;
   zoomFactor: ZoomFactorType;
   storyViewReceiptsEnabled: boolean;
@@ -531,6 +532,9 @@ export function createIPCEvents(
     },
     getTextFormatting: () => window.storage.get('textFormatting', true),
     setTextFormatting: value => window.storage.put('textFormatting', value),
+
+    getMobileUiTweaks: () => window.storage.get('mobileUiTweaks', true),
+    setMobileUiTweaks: value => window.storage.put('mobileUiTweaks', value),
 
     getAlwaysRelayCalls: () => window.storage.get('always-relay-calls'),
     setAlwaysRelayCalls: value =>

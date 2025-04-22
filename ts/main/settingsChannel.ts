@@ -92,6 +92,7 @@ export class SettingsChannel extends EventEmitter {
 
     this.#installSetting('sentMediaQualitySetting');
     this.#installSetting('textFormatting');
+    this.#installSetting('mobileUiTweaks');
 
     this.#installSetting('autoConvertEmoji');
     this.#installSetting('autoDownloadUpdate');

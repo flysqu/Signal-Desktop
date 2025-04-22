@@ -49,6 +49,7 @@ const settingRelayCalls = createSetting('alwaysRelayCalls');
 const settingSentMediaQuality = createSetting('sentMediaQualitySetting');
 const settingSpellCheck = createSetting('spellCheck');
 const settingTextFormatting = createSetting('textFormatting');
+const settingMobileUiTweaks = createSetting('mobileUiTweaks')
 const settingTheme = createSetting('themeSetting');
 const settingSystemTraySetting = createSetting('systemTraySetting');
 const settingLocaleOverride = createSetting('localeOverride');
@@ -187,6 +188,7 @@ async function renderPreferences() {
     hasSpellCheck,
     hasStoriesDisabled,
     hasTextFormatting,
+    hasMobileUiTweaks,
     hasTypingIndicators,
     lastSyncTime,
     notificationContent,
@@ -234,6 +236,7 @@ async function renderPreferences() {
     hasSpellCheck: settingSpellCheck.getValue(),
     hasStoriesDisabled: settingHasStoriesDisabled.getValue(),
     hasTextFormatting: settingTextFormatting.getValue(),
+    hasMobileUiTweaks: settingMobileUiTweaks.getValue(),
     hasTypingIndicators: settingTypingIndicators.getValue(),
     lastSyncTime: settingLastSyncTime.getValue(),
     notificationContent: settingNotificationSetting.getValue(),
@@ -335,6 +338,7 @@ async function renderPreferences() {
     hasSpellCheck,
     hasStoriesDisabled,
     hasTextFormatting,
+    hasMobileUiTweaks,
     hasTypingIndicators,
     lastSyncTime,
     localeOverride,
@@ -483,6 +487,7 @@ async function renderPreferences() {
     onTextFormattingChange: attachRenderCallback(
       settingTextFormatting.setValue
     ),
+    onMobileUiTweaksCheckChange: attachRenderCallback(settingMobileUiTweaks.setValue),
     onThemeChange: attachRenderCallback(settingTheme.setValue),
     onUniversalExpireTimerChange: (newValue: number): Promise<void> => {
       return onUniversalExpireTimerChange(

@@ -138,6 +138,7 @@ export type StorageAccessType = {
   pinnedConversationIds: ReadonlyArray<string>;
   preferContactAvatars: boolean;
   textFormatting: boolean;
+  mobileUiTweaks: boolean;
   typingIndicators: boolean;
   sealedSenderIndicators: boolean;
   storageFetchComplete: boolean;

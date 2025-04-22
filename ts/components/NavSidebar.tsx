@@ -165,7 +165,7 @@ export function NavSidebar({
       role="navigation"
       className={classNames('NavSidebar', {
         'NavSidebar--narrow': widthBreakpoint === WidthBreakpoint.Narrow,
-        'NavSidebar--collapsed': useSelector(getSelectedNavTab) == NavTab.Chats && navTabsCollapsed
+        'NavSidebar--collapsed': useSelector(getSelectedNavTab) == NavTab.Chats && navTabsCollapsed 
       })}
       style={{ width }}
     >

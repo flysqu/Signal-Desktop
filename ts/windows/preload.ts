@@ -73,6 +73,7 @@ installSetting('notificationDrawAttention');
 installSetting('notificationSetting');
 installSetting('sentMediaQualitySetting');
 installSetting('textFormatting');
+installSetting('mobileUiTweaks')
 installSetting('universalExpireTimer');
 installSetting('zoomFactor');
 installSetting('phoneNumberDiscoverabilitySetting');
